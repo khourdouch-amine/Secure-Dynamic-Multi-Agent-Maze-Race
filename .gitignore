@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environnements et secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE et systèmes
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Journaux et fichiers temporaires
+*.log
+*.tmp
+
+# Sauvegardes locales
+backups/
+
+# Fichiers accidentels
+/0
+/=
+
+# Anciennes copies temporaires de fichiers source
+*.bak
+*.bak_*
+*.backup
+*.before_*
+*.pre_*

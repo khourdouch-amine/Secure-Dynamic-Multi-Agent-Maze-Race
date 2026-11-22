@@ -1,0 +1,311 @@
+{
+  "experiment": "Multi-scale statistical classical vs geometric Grover",
+  "scenario": {
+    "name": "G3_4x4_L6",
+    "grid": [
+      4,
+      4
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      3,
+      3
+    ],
+    "obstacles": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "route_length": 6,
+    "search_space": 4096,
+    "valid_routes": 7,
+    "valid_indices": [
+      63,
+      207,
+      243,
+      783,
+      819,
+      3087,
+      3123
+    ],
+    "description": "Longer routes and a larger Grover search space."
+  },
+  "configuration": {
+    "classical_repetitions": 30,
+    "grover_repetitions": 0,
+    "confidence_level": 0.95,
+    "base_seed": 4200
+  },
+  "classical": {
+    "astar": {
+      "algorithm": "A*",
+      "objective": "shortest path",
+      "timing_s": {
+        "samples": 30,
+        "mean": 3.143816663092972e-05,
+        "median": 3.210400018360815e-05,
+        "stdev_sample": 7.130552289927551e-06,
+        "standard_error": 1.3018547788878123e-06,
+        "min": 2.1629999537253752e-05,
+        "max": 5.8044000070367474e-05,
+        "confidence_level": 0.95,
+        "mean_confidence_interval": [
+          2.877557464739625e-05,
+          3.4100758614463195e-05
+        ],
+        "confidence_interval_method": "two-sided Student t"
+      },
+      "individual_times_s": [
+        2.2696999621985015e-05,
+        3.0559999686374795e-05,
+        2.2602999706577975e-05,
+        3.795399970840663e-05,
+        3.1135999961406924e-05,
+        3.633799951785477e-05,
+        3.2703000215406064e-05,
+        2.754399974946864e-05,
+        3.2111000109580345e-05,
+        3.102799928456079e-05,
+        2.797900015139021e-05,
+        3.2798000574985053e-05,
+        3.7043000702396967e-05,
+        4.070200066053076e-05,
+        2.779399983410258e-05,
+        3.0078999770921655e-05,
+        2.880000010918593e-05,
+        3.306500002508983e-05,
+        5.8044000070367474e-05,
+        3.213099989807233e-05,
+        2.2156999875733163e-05,
+        2.1668999579560477e-05,
+        2.1629999537253752e-05,
+        2.384999970672652e-05,
+        3.256899981352035e-05,
+        3.61379998139455e-05,
+        3.39600001098006e-05,
+        3.2314000236510765e-05,
+        3.2097000257635955e-05,
+        3.36520006385399e-05
+      ],
+      "valid_runs": 30,
+      "total_runs": 30,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "path_length_moves": 6,
+      "all_paths_valid": true
+    },
+    "dijkstra": {
+      "algorithm": "Dijkstra",
+      "objective": "shortest path",
+      "timing_s": {
+        "samples": 30,
+        "mean": 2.8240499947666346e-05,
+        "median": 2.6998500288755167e-05,
+        "stdev_sample": 8.253798007366686e-06,
+        "standard_error": 1.506930451241975e-06,
+        "min": 1.898400023492286e-05,
+        "max": 5.4398999964178074e-05,
+        "confidence_level": 0.95,
+        "mean_confidence_interval": [
+          2.5158481120153847e-05,
+          3.1322518775178844e-05
+        ],
+        "confidence_interval_method": "two-sided Student t"
+      },
+      "individual_times_s": [
+        2.1808999917993788e-05,
+        2.997599949594587e-05,
+        2.8511999516922515e-05,
+        3.362099960213527e-05,
+        3.439499960222747e-05,
+        2.447199949529022e-05,
+        2.8557000405271538e-05,
+        2.5822999305091798e-05,
+        2.1373999516072217e-05,
+        1.9489999431243632e-05,
+        3.180899966537254e-05,
+        2.571400000306312e-05,
+        1.9609999981184956e-05,
+        1.9209999663871713e-05,
+        3.1628999749955256e-05,
+        4.951100072503323e-05,
+        2.017499991779914e-05,
+        2.742000015132362e-05,
+        2.669200057425769e-05,
+        1.9533999875420704e-05,
+        1.898400023492286e-05,
+        2.76040000244393e-05,
+        2.7305000003252644e-05,
+        3.970700072386535e-05,
+        2.6401000468467828e-05,
+        3.050800023629563e-05,
+        2.664400017238222e-05,
+        2.472300002409611e-05,
+        3.160699998261407e-05,
+        5.4398999964178074e-05
+      ],
+      "valid_runs": 30,
+      "total_runs": 30,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "path_length_moves": 6,
+      "all_paths_valid": true
+    },
+    "exhaustive": {
+      "algorithm": "Classical exhaustive route enumeration",
+      "objective": "enumerate all valid fixed-length routes",
+      "timing_s": {
+        "samples": 30,
+        "mean": 0.008514930466662917,
+        "median": 0.007959918999858928,
+        "stdev_sample": 0.0017355127360897179,
+        "standard_error": 0.00031685982479794957,
+        "min": 0.007063983000080043,
+        "max": 0.01503689699984534,
+        "confidence_level": 0.95,
+        "mean_confidence_interval": [
+          0.007866879360585177,
+          0.009162981572740658
+        ],
+        "confidence_interval_method": "two-sided Student t"
+      },
+      "individual_times_s": [
+        0.007868685000175901,
+        0.008988992999547918,
+        0.00922102500044275,
+        0.007178566000220599,
+        0.009219057000336761,
+        0.007414055000481312,
+        0.00760845100012375,
+        0.007143786000597174,
+        0.008344204999957583,
+        0.00740156499978184,
+        0.008039934000407811,
+        0.007063983000080043,
+        0.007771871999466384,
+        0.007892443999480747,
+        0.007918964000054984,
+        0.007496610999623954,
+        0.0075923470003544935,
+        0.008542256000509951,
+        0.008000873999662872,
+        0.007490488000257756,
+        0.007560895000096934,
+        0.00836193099985394,
+        0.01503689699984534,
+        0.008649770999909379,
+        0.012599336999301158,
+        0.011354690000189294,
+        0.008560987000237219,
+        0.00979090799955884,
+        0.007113650000064808,
+        0.008220686999266036
+      ],
+      "valid_routes": 7,
+      "valid_indices": [
+        63,
+        207,
+        243,
+        783,
+        819,
+        3087,
+        3123
+      ],
+      "search_space": 4096,
+      "valid_runs": 30,
+      "total_runs": 30,
+      "all_results_consistent": true
+    }
+  },
+  "grover_structure": {
+    "iterations": 18,
+    "oracle_calls_per_circuit": 18,
+    "qubits": 26,
+    "initial_depth": 3243,
+    "initial_operations": 4886,
+    "construction_time_s": 0.05101636099971074,
+    "classically_counted_solutions": 7
+  },
+  "quantum_simulation_policy": {
+    "performed": false,
+    "reason": "Scenario excluded from quantum transpilation and simulation."
+  },
+  "quantum": null,
+  "methodological_notes": [
+    "A* and Dijkstra solve the shortest-path objective.",
+    "Classical exhaustive enumeration and Grover use the same fixed-length route search space.",
+    "Classical timing measurements exclude one warm-up per algorithm.",
+    "Classical timing confidence intervals use the two-sided Student t distribution.",
+    "Quantum success-proportion confidence intervals use the Wilson score method.",
+    "Grover circuit construction internally performs classical solution counting to determine the iteration count.",
+    "Circuit construction, transpilation and repeated simulation times are reported separately.",
+    "Grover simulations use Qiskit Aer CPU matrix-product-state simulation, not quantum hardware.",
+    "G2 uses a maximum MPS bond dimension of 128 and only 32 shots per run; results are diagnostic and approximate.",
+    "G3 is limited to classical timing and Grover circuit structural/construction analysis; no transpilation or quantum simulation is performed.",
+    "The experiment does not establish quantum advantage."
+  ]
+}

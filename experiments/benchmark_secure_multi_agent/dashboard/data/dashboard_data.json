@@ -1,0 +1,671 @@
+{
+  "project": {
+    "name": "Secure Dynamic Multi-Agent Maze Race",
+    "video_language": "English",
+    "video_style": "Animated Technical Dashboard",
+    "target_duration_minutes": [
+      5,
+      8
+    ],
+    "video_resolution": "1920x1080",
+    "video_format": "MP4 H.264"
+  },
+  "algorithm_mapping": {
+    "R01": "A*",
+    "R02": "Dijkstra",
+    "R03": "RRT*",
+    "R04": "D* Lite",
+    "R05": "Bidirectional BFS",
+    "R06": "Grover-assisted Navigation",
+    "R07": "Global Quantum Walk",
+    "R08": "Hierarchical Local Quantum Walk",
+    "R09": "QAOA Navigation",
+    "R10": "Variational Quantum Classifier Navigation"
+  },
+  "static_10_agent_benchmark": {
+    "source_file": "ten_agents_static_seed42.json",
+    "scenario": {
+      "seed": 42,
+      "width": 25,
+      "height": 25,
+      "time_step": 0.03333333333333333,
+      "dynamic_walls": 0,
+      "moving_obstacles": 0,
+      "classical_agents": 5,
+      "hybrid_quantum_classical_agents": 5,
+      "goal_assignment": [
+        0,
+        7,
+        3,
+        9,
+        8,
+        2,
+        4,
+        1,
+        6,
+        5
+      ]
+    },
+    "cycles": 2000,
+    "simulation_time_s": 66.66666666666667,
+    "completed": 3,
+    "all_completed": false,
+    "completed_agents": [
+      "R01",
+      "R04",
+      "R08"
+    ],
+    "manager_metrics": {
+      "agents": 10,
+      "successful_moves": 217,
+      "blocked_moves": 13853,
+      "conflicts": 1970,
+      "invalid_proposals": 0,
+      "destination_conflicts": 1970,
+      "cycle_rejections": 9116,
+      "dependency_blocked": 2744,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 23
+    },
+    "agents": {
+      "R01": {
+        "configured_algorithm": "A*",
+        "family": "classical",
+        "ai_type": "classical",
+        "start": [
+          1,
+          1
+        ],
+        "goal": [
+          11,
+          7
+        ],
+        "final_position": [
+          11,
+          7
+        ],
+        "reached_goal": true,
+        "status": "reached_goal",
+        "recovery_state": "idle",
+        "metrics": {
+          "planning_time": 8.843100022204453e-05,
+          "path_length": 28.0,
+          "moves": 28,
+          "collisions": 0,
+          "replans": 1
+        },
+        "quantum_metadata": {}
+      },
+      "R02": {
+        "configured_algorithm": "Dijkstra",
+        "family": "classical",
+        "ai_type": "classical",
+        "start": [
+          23,
+          23
+        ],
+        "goal": [
+          7,
+          18
+        ],
+        "final_position": [
+          11,
+          23
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 0.00025032499979715794,
+          "path_length": 9.0,
+          "moves": 20,
+          "collisions": 0,
+          "replans": 6
+        },
+        "quantum_metadata": {}
+      },
+      "R03": {
+        "configured_algorithm": "RRT*",
+        "family": "classical",
+        "ai_type": "classical",
+        "start": [
+          1,
+          23
+        ],
+        "goal": [
+          23,
+          18
+        ],
+        "final_position": [
+          6,
+          23
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 0.0004973059999429097,
+          "path_length": 34.0,
+          "moves": 9,
+          "collisions": 0,
+          "replans": 2
+        },
+        "quantum_metadata": {}
+      },
+      "R04": {
+        "configured_algorithm": "D* Lite",
+        "family": "classical",
+        "ai_type": "classical",
+        "start": [
+          23,
+          1
+        ],
+        "goal": [
+          17,
+          8
+        ],
+        "final_position": [
+          17,
+          8
+        ],
+        "reached_goal": true,
+        "status": "reached_goal",
+        "recovery_state": "idle",
+        "metrics": {
+          "planning_time": 0.00017474799960837117,
+          "path_length": 23.0,
+          "moves": 23,
+          "collisions": 0,
+          "replans": 1
+        },
+        "quantum_metadata": {}
+      },
+      "R05": {
+        "configured_algorithm": "Bidirectional BFS",
+        "family": "classical",
+        "ai_type": "classical",
+        "start": [
+          11,
+          12
+        ],
+        "goal": [
+          5,
+          7
+        ],
+        "final_position": [
+          11,
+          8
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 0.0019960750009886397,
+          "path_length": 29.0,
+          "moves": 32,
+          "collisions": 0,
+          "replans": 24
+        },
+        "quantum_metadata": {}
+      },
+      "R06": {
+        "configured_algorithm": "Grover-assisted Navigation",
+        "family": "quantum",
+        "ai_type": "hybrid_quantum_classical",
+        "start": [
+          12,
+          23
+        ],
+        "goal": [
+          1,
+          18
+        ],
+        "final_position": [
+          7,
+          23
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 3.7651430769997205,
+          "path_length": 15.0,
+          "moves": 9,
+          "collisions": 0,
+          "replans": 2
+        },
+        "quantum_metadata": {
+          "algorithm": "Hierarchical Local Quantum Walk",
+          "window_size": 7,
+          "coin_type": "grover",
+          "shots_per_circuit": 16,
+          "walk_steps_per_evaluation": 2,
+          "max_total_qubits": 8,
+          "segments": 2,
+          "global_guidance_calls": 2,
+          "quantum_decisions": 6,
+          "classical_fallback_decisions": 9,
+          "quantum_circuit_executions": 15,
+          "classical_fallback_segments": 0,
+          "path_length": 15,
+          "path_nodes": 16,
+          "failure": null
+        }
+      },
+      "R07": {
+        "configured_algorithm": "Global Quantum Walk",
+        "family": "quantum",
+        "ai_type": "hybrid_quantum_classical",
+        "start": [
+          23,
+          12
+        ],
+        "goal": [
+          7,
+          23
+        ],
+        "final_position": [
+          12,
+          23
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 5.404302539000128,
+          "path_length": 9.0,
+          "moves": 38,
+          "collisions": 0,
+          "replans": 2
+        },
+        "quantum_metadata": {
+          "algorithm": "Hierarchical Local Quantum Walk",
+          "window_size": 7,
+          "coin_type": "grover",
+          "shots_per_circuit": 16,
+          "walk_steps_per_evaluation": 2,
+          "max_total_qubits": 8,
+          "segments": 2,
+          "global_guidance_calls": 2,
+          "quantum_decisions": 5,
+          "classical_fallback_decisions": 4,
+          "quantum_circuit_executions": 9,
+          "classical_fallback_segments": 0,
+          "path_length": 9,
+          "path_nodes": 10,
+          "failure": null
+        }
+      },
+      "R08": {
+        "configured_algorithm": "Hierarchical Local Quantum Walk",
+        "family": "quantum",
+        "ai_type": "hybrid_quantum_classical",
+        "start": [
+          13,
+          2
+        ],
+        "goal": [
+          23,
+          7
+        ],
+        "final_position": [
+          23,
+          7
+        ],
+        "reached_goal": true,
+        "status": "reached_goal",
+        "recovery_state": "idle",
+        "metrics": {
+          "planning_time": 2.2278708859998915,
+          "path_length": 21.0,
+          "moves": 21,
+          "collisions": 0,
+          "replans": 1
+        },
+        "quantum_metadata": {
+          "algorithm": "Hierarchical Local Quantum Walk",
+          "window_size": 7,
+          "coin_type": "grover",
+          "shots_per_circuit": 16,
+          "walk_steps_per_evaluation": 2,
+          "max_total_qubits": 8,
+          "segments": 5,
+          "global_guidance_calls": 5,
+          "quantum_decisions": 14,
+          "classical_fallback_decisions": 7,
+          "quantum_circuit_executions": 21,
+          "classical_fallback_segments": 0,
+          "path_length": 21,
+          "path_nodes": 22,
+          "failure": null
+        }
+      },
+      "R09": {
+        "configured_algorithm": "QAOA Navigation",
+        "family": "quantum",
+        "ai_type": "hybrid_quantum_classical",
+        "start": [
+          1,
+          13
+        ],
+        "goal": [
+          7,
+          1
+        ],
+        "final_position": [
+          11,
+          9
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 14.84278122500018,
+          "path_length": 12.0,
+          "moves": 18,
+          "collisions": 0,
+          "replans": 6
+        },
+        "quantum_metadata": {
+          "algorithm": "Hierarchical Local Quantum Walk",
+          "window_size": 7,
+          "coin_type": "grover",
+          "shots_per_circuit": 16,
+          "walk_steps_per_evaluation": 2,
+          "max_total_qubits": 8,
+          "segments": 4,
+          "global_guidance_calls": 4,
+          "quantum_decisions": 9,
+          "classical_fallback_decisions": 3,
+          "quantum_circuit_executions": 12,
+          "classical_fallback_segments": 0,
+          "path_length": 12,
+          "path_nodes": 13,
+          "failure": null
+        }
+      },
+      "R10": {
+        "configured_algorithm": "Variational Quantum Classifier Navigation",
+        "family": "quantum",
+        "ai_type": "hybrid_quantum_classical",
+        "start": [
+          17,
+          17
+        ],
+        "goal": [
+          17,
+          23
+        ],
+        "final_position": [
+          11,
+          22
+        ],
+        "reached_goal": false,
+        "status": "waiting",
+        "recovery_state": "failed",
+        "metrics": {
+          "planning_time": 3.2958093920001374,
+          "path_length": 7.0,
+          "moves": 19,
+          "collisions": 0,
+          "replans": 2
+        },
+        "quantum_metadata": {
+          "algorithm": "Hierarchical Local Quantum Walk",
+          "window_size": 7,
+          "coin_type": "grover",
+          "shots_per_circuit": 16,
+          "walk_steps_per_evaluation": 2,
+          "max_total_qubits": 8,
+          "segments": 2,
+          "global_guidance_calls": 2,
+          "quantum_decisions": 6,
+          "classical_fallback_decisions": 1,
+          "quantum_circuit_executions": 7,
+          "classical_fallback_segments": 0,
+          "path_length": 7,
+          "path_nodes": 8,
+          "failure": null
+        }
+      }
+    },
+    "history_available": true,
+    "history_cycles": 2000
+  },
+  "dynamic_2_agent_benchmark": {
+    "source_file": "dynamic_multi_agent_seed42.json",
+    "seed": 42,
+    "cycles": 20,
+    "simulation_time_s": 0.666666666667,
+    "completed": {
+      "CLASSICAL_ASTAR": true,
+      "HYBRID_QUANTUM_WALK": true
+    },
+    "agents": {
+      "CLASSICAL_ASTAR": {
+        "ai_type": "classical",
+        "start": [
+          1,
+          3
+        ],
+        "goal": [
+          5,
+          3
+        ],
+        "final_position": [
+          5,
+          3
+        ],
+        "status": "reached_goal",
+        "recovery_state": "idle",
+        "metrics": {
+          "planning_time": 0.00013431699994725932,
+          "path_length": 3.0,
+          "moves": 8,
+          "collisions": 0,
+          "replans": 4
+        }
+      },
+      "HYBRID_QUANTUM_WALK": {
+        "ai_type": "hybrid_quantum_classical",
+        "start": [
+          5,
+          3
+        ],
+        "goal": [
+          1,
+          3
+        ],
+        "final_position": [
+          1,
+          3
+        ],
+        "status": "reached_goal",
+        "recovery_state": "idle",
+        "metrics": {
+          "planning_time": 3.6885807759999807,
+          "path_length": 6.0,
+          "moves": 10,
+          "collisions": 0,
+          "replans": 5
+        }
+      }
+    },
+    "manager_metrics": {
+      "agents": 2,
+      "successful_moves": 18,
+      "blocked_moves": 19,
+      "conflicts": 1,
+      "invalid_proposals": 0,
+      "destination_conflicts": 1,
+      "cycle_rejections": 18,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0
+    },
+    "initial_obstacles": {
+      "O00": [
+        3,
+        2
+      ]
+    },
+    "final_obstacles": {
+      "O00": [
+        3,
+        2
+      ]
+    }
+  },
+  "baseline_results": {
+    "source_file": "baseline_results.json",
+    "number_of_records": 6,
+    "records": [
+      {
+        "seed": 42,
+        "algorithm": "A*",
+        "ai_type": "classical",
+        "completed": true,
+        "path_length": 8.0,
+        "planning_latency_s": 0.00023221800074679777,
+        "agent_planning_time_s": 0.0001993670011870563,
+        "execution_time_s": 0.0005593429996224586,
+        "simulation_time_s": 0.266666666667,
+        "simulation_cycles": 8,
+        "moves": 8,
+        "replans": 1,
+        "collisions": 0,
+        "successful_moves": 8,
+        "blocked_moves": 0,
+        "conflicts": 0,
+        "quantum_decisions": 0,
+        "classical_fallback_decisions": 0,
+        "quantum_circuit_executions": 0,
+        "quantum_shots": 0,
+        "quantum_walk_steps": 0
+      },
+      {
+        "seed": 42,
+        "algorithm": "Quantum Walk hybride",
+        "ai_type": "hybrid_quantum_classical",
+        "completed": true,
+        "path_length": 8.0,
+        "planning_latency_s": 4.8468515499989735,
+        "agent_planning_time_s": 4.846801188999962,
+        "execution_time_s": 0.0005609450017800555,
+        "simulation_time_s": 0.266666666667,
+        "simulation_cycles": 8,
+        "moves": 8,
+        "replans": 1,
+        "collisions": 0,
+        "successful_moves": 8,
+        "blocked_moves": 0,
+        "conflicts": 0,
+        "quantum_decisions": 3,
+        "classical_fallback_decisions": 5,
+        "quantum_circuit_executions": 12,
+        "quantum_shots": 32,
+        "quantum_walk_steps": 2
+      },
+      {
+        "seed": 43,
+        "algorithm": "A*",
+        "ai_type": "classical",
+        "completed": true,
+        "path_length": 8.0,
+        "planning_latency_s": 0.0001938579989655409,
+        "agent_planning_time_s": 0.00017754600048647262,
+        "execution_time_s": 0.0004726719998870976,
+        "simulation_time_s": 0.266666666667,
+        "simulation_cycles": 8,
+        "moves": 8,
+        "replans": 1,
+        "collisions": 0,
+        "successful_moves": 8,
+        "blocked_moves": 0,
+        "conflicts": 0,
+        "quantum_decisions": 0,
+        "classical_fallback_decisions": 0,
+        "quantum_circuit_executions": 0,
+        "quantum_shots": 0,
+        "quantum_walk_steps": 0
+      },
+      {
+        "seed": 43,
+        "algorithm": "Quantum Walk hybride",
+        "ai_type": "hybrid_quantum_classical",
+        "completed": true,
+        "path_length": 8.0,
+        "planning_latency_s": 6.137724156000331,
+        "agent_planning_time_s": 6.137686054000369,
+        "execution_time_s": 0.0007308049971470609,
+        "simulation_time_s": 0.266666666667,
+        "simulation_cycles": 8,
+        "moves": 8,
+        "replans": 1,
+        "collisions": 0,
+        "successful_moves": 8,
+        "blocked_moves": 0,
+        "conflicts": 0,
+        "quantum_decisions": 2,
+        "classical_fallback_decisions": 6,
+        "quantum_circuit_executions": 12,
+        "quantum_shots": 32,
+        "quantum_walk_steps": 2
+      },
+      {
+        "seed": 44,
+        "algorithm": "A*",
+        "ai_type": "classical",
+        "completed": true,
+        "path_length": 8.0,
+        "planning_latency_s": 0.0003472280004643835,
+        "agent_planning_time_s": 0.00032235199978458695,
+        "execution_time_s": 0.0005819830003019888,
+        "simulation_time_s": 0.266666666667,
+        "simulation_cycles": 8,
+        "moves": 8,
+        "replans": 1,
+        "collisions": 0,
+        "successful_moves": 8,
+        "blocked_moves": 0,
+        "conflicts": 0,
+        "quantum_decisions": 0,
+        "classical_fallback_decisions": 0,
+        "quantum_circuit_executions": 0,
+        "quantum_shots": 0,
+        "quantum_walk_steps": 0
+      },
+      {
+        "seed": 44,
+        "algorithm": "Quantum Walk hybride",
+        "ai_type": "hybrid_quantum_classical",
+        "completed": true,
+        "path_length": 8.0,
+        "planning_latency_s": 5.10244315899763,
+        "agent_planning_time_s": 5.1024215090001235,
+        "execution_time_s": 0.0005209340015426278,
+        "simulation_time_s": 0.266666666667,
+        "simulation_cycles": 8,
+        "moves": 8,
+        "replans": 1,
+        "collisions": 0,
+        "successful_moves": 8,
+        "blocked_moves": 0,
+        "conflicts": 0,
+        "quantum_decisions": 3,
+        "classical_fallback_decisions": 5,
+        "quantum_circuit_executions": 12,
+        "quantum_shots": 32,
+        "quantum_walk_steps": 2
+      }
+    ]
+  },
+  "methodological_notes": [
+    "The ten-agent benchmark is a static scenario with zero dynamic walls and zero moving obstacles.",
+    "The two-agent dynamic benchmark is a separate experiment and must not be merged with the ten-agent results.",
+    "The baseline file contains six records, including repeated A* and hybrid Quantum Walk measurements.",
+    "R06-R10 are configured as hybrid quantum-classical agents, not pure quantum algorithms.",
+    "The quantum metadata in the ten-agent result repeats Hierarchical Local Quantum Walk for all five quantum-family agents; configured algorithm labels are taken from the inspected build_agents source mapping, not from that metadata.",
+    "Quantum circuit simulation must not be described as execution on quantum hardware."
+  ]
+}

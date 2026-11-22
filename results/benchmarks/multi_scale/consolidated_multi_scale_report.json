@@ -1,0 +1,787 @@
+{
+  "title": "Secure Dynamic Multi-Agent Maze Race - Multi-Scale Benchmark",
+  "date": "2026-11-19",
+  "methodology": {
+    "classical_planners": [
+      "A*",
+      "Dijkstra"
+    ],
+    "quantum_algorithm": "Geometric Grover search",
+    "simulator": "Qiskit Aer, matrix_product_state, CPU",
+    "transpilation": "Optimization level 2, Aer MPS target, transpiler seed 42",
+    "important_caveats": [
+      "A* and Dijkstra solve shortest-path planning.",
+      "Grover searches fixed-length encoded route sequences.",
+      "These objectives are not identical.",
+      "Grover iteration counts use classical solution counting.",
+      "No quantum advantage is claimed.",
+      "G2 uses an MPS bond-dimension cap of 128.",
+      "G2 has only 32 shots and is diagnostic.",
+      "G3 was not transpiled or simulated.",
+      "Classical timings in this report are single measurements."
+    ]
+  },
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "G1_3x3_L4",
+        "search_space": 256,
+        "route_length": 4,
+        "valid_routes": 3,
+        "feasible": true,
+        "grid": [
+          3,
+          3
+        ],
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          2,
+          2
+        ],
+        "obstacles": [
+          [
+            1,
+            0
+          ]
+        ],
+        "description": "Reference scenario: compact grid, four-step routes."
+      },
+      "classical_shortest_path": {
+        "A*": {
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "path_length_moves": 4,
+          "valid": true,
+          "single_run_time_s": 4.663399977289373e-05,
+          "timing_note": "Single measurement; not a statistical benchmark."
+        },
+        "Dijkstra": {
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "path_length_moves": 4,
+          "valid": true,
+          "single_run_time_s": 3.075200038438197e-05,
+          "timing_note": "Single measurement; not a statistical benchmark."
+        }
+      },
+      "grover": {
+        "search_space": 256,
+        "valid_routes": 3,
+        "valid_route_indices": [
+          15,
+          51,
+          195
+        ],
+        "grover_iterations": 7,
+        "classical_solution_counting_time_s": 0.000525965999258915,
+        "circuit_construction_time_s": 0.01494516900038434,
+        "qubits": 18,
+        "initial_depth": 955,
+        "initial_operations": 1180,
+        "transpilation": {
+          "performed": true,
+          "backend": "AerSimulator MPS",
+          "optimization_level": 2,
+          "seed_transpiler": 42,
+          "time_s": 2.224523510000836,
+          "depth": 24160,
+          "operations": 26959
+        },
+        "simulation": {
+          "performed": false
+        }
+      },
+      "quantum_simulation": {
+        "scenario": "G1_3x3_L4",
+        "grid": [
+          3,
+          3
+        ],
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          2,
+          2
+        ],
+        "obstacles": [
+          [
+            1,
+            0
+          ]
+        ],
+        "route_length": 4,
+        "search_space": 256,
+        "valid_routes": 3,
+        "grover_iterations": 7,
+        "shots": 1024,
+        "valid_shots": 1020,
+        "success_probability": 0.99609375,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51,
+          195
+        ],
+        "classical_valid_indices": [
+          15,
+          51,
+          195
+        ],
+        "transpilation_time_s": 2.202271752999877,
+        "simulation_time_s": 6.332978688999901,
+        "qubits": 18,
+        "initial_depth": 955,
+        "transpiled_depth": 24160,
+        "transpiled_operations": 26957,
+        "simulator": "matrix_product_state",
+        "simulator_options": {
+          "max_memory_mb": 7000,
+          "seed_simulator": 42,
+          "mps_omp_threads": 1,
+          "matrix_product_state_truncation_threshold": 1e-16
+        },
+        "bond_dimension_cap": null,
+        "approximation_warning": false,
+        "results": [
+          {
+            "bitstring": "11011011",
+            "index": 219,
+            "route": [
+              3,
+              2,
+              1,
+              3
+            ],
+            "valid": false,
+            "count": 1,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            "collision_step": 2
+          },
+          {
+            "bitstring": "11111111",
+            "index": 255,
+            "route": [
+              3,
+              3,
+              3,
+              3
+            ],
+            "valid": false,
+            "count": 1,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ]
+            ],
+            "collision_step": 3
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "valid": true,
+            "count": 345,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11011101",
+            "index": 221,
+            "route": [
+              1,
+              3,
+              1,
+              3
+            ],
+            "valid": false,
+            "count": 1,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                -1
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "11000011",
+            "index": 195,
+            "route": [
+              3,
+              0,
+              0,
+              3
+            ],
+            "valid": true,
+            "count": 328,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11100001",
+            "index": 225,
+            "route": [
+              1,
+              0,
+              2,
+              3
+            ],
+            "valid": false,
+            "count": 1,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                -1
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "valid": true,
+            "count": 347,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ],
+        "note": "CPU simulation only. Grover iteration count uses classical solution counting. No quantum advantage claimed. MPS numerical truncation may affect results."
+      }
+    },
+    {
+      "scenario": {
+        "name": "G2_4x4_L4",
+        "search_space": 256,
+        "route_length": 4,
+        "valid_routes": 2,
+        "feasible": true,
+        "grid": [
+          4,
+          4
+        ],
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          2,
+          2
+        ],
+        "obstacles": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "description": "Larger grid with the same route search-space size as G1."
+      },
+      "classical_shortest_path": {
+        "A*": {
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "path_length_moves": 4,
+          "valid": true,
+          "single_run_time_s": 2.650199985509971e-05,
+          "timing_note": "Single measurement; not a statistical benchmark."
+        },
+        "Dijkstra": {
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "path_length_moves": 4,
+          "valid": true,
+          "single_run_time_s": 2.076700002362486e-05,
+          "timing_note": "Single measurement; not a statistical benchmark."
+        }
+      },
+      "grover": {
+        "search_space": 256,
+        "valid_routes": 2,
+        "valid_route_indices": [
+          15,
+          51
+        ],
+        "grover_iterations": 8,
+        "classical_solution_counting_time_s": 0.0003888239998559584,
+        "circuit_construction_time_s": 0.013856925000254705,
+        "qubits": 20,
+        "initial_depth": 995,
+        "initial_operations": 1474,
+        "transpilation": {
+          "performed": true,
+          "backend": "AerSimulator MPS",
+          "optimization_level": 2,
+          "seed_transpiler": 42,
+          "time_s": 2.389328803999888,
+          "depth": 24767,
+          "operations": 30978
+        },
+        "simulation": {
+          "performed": false
+        }
+      },
+      "quantum_simulation": {
+        "scenario": "G2_4x4_L4",
+        "grid": [
+          4,
+          4
+        ],
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          2,
+          2
+        ],
+        "obstacles": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "route_length": 4,
+        "search_space": 256,
+        "valid_routes": 2,
+        "grover_iterations": 8,
+        "shots": 32,
+        "valid_shots": 32,
+        "success_probability": 1.0,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51
+        ],
+        "classical_valid_indices": [
+          15,
+          51
+        ],
+        "transpilation_time_s": 2.517256396999983,
+        "simulation_time_s": 24.262039258000186,
+        "qubits": 20,
+        "initial_depth": 995,
+        "transpiled_depth": 24768,
+        "transpiled_operations": 30975,
+        "simulator": "matrix_product_state",
+        "simulator_options": {
+          "max_memory_mb": 7000,
+          "seed_simulator": 42,
+          "mps_omp_threads": 1,
+          "matrix_product_state_truncation_threshold": 1e-16,
+          "matrix_product_state_max_bond_dimension": 128
+        },
+        "bond_dimension_cap": 128,
+        "approximation_warning": true,
+        "results": [
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "valid": true,
+            "count": 19,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "valid": true,
+            "count": 13,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ],
+        "note": "CPU simulation only. Grover iteration count uses classical solution counting. No quantum advantage claimed. MPS numerical truncation may affect results."
+      }
+    },
+    {
+      "scenario": {
+        "name": "G3_4x4_L6",
+        "search_space": 4096,
+        "route_length": 6,
+        "valid_routes": 7,
+        "feasible": true,
+        "grid": [
+          4,
+          4
+        ],
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          3,
+          3
+        ],
+        "obstacles": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "description": "Longer routes and a larger Grover search space."
+      },
+      "classical_shortest_path": {
+        "A*": {
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "path_length_moves": 6,
+          "valid": true,
+          "single_run_time_s": 4.4821999836131e-05,
+          "timing_note": "Single measurement; not a statistical benchmark."
+        },
+        "Dijkstra": {
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "path_length_moves": 6,
+          "valid": true,
+          "single_run_time_s": 3.864599966618698e-05,
+          "timing_note": "Single measurement; not a statistical benchmark."
+        }
+      },
+      "grover": {
+        "search_space": 4096,
+        "valid_routes": 7,
+        "valid_route_indices": [
+          63,
+          207,
+          243,
+          783,
+          819,
+          3087,
+          3123
+        ],
+        "grover_iterations": 18,
+        "classical_solution_counting_time_s": 0.007378711000455951,
+        "circuit_construction_time_s": 0.04775729799985129,
+        "qubits": 26,
+        "initial_depth": 3243,
+        "initial_operations": 4886,
+        "transpilation": {
+          "performed": false,
+          "backend": "AerSimulator MPS"
+        },
+        "simulation": {
+          "performed": false
+        }
+      },
+      "quantum_simulation": {
+        "performed": false,
+        "reason": "Not executed in this campaign; excluded by resource preflight policy."
+      }
+    }
+  ]
+}

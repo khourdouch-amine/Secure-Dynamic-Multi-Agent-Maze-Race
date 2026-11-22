@@ -1,0 +1,1246 @@
+{
+  "seed": 42,
+  "cycles": 20,
+  "simulation_time_s": 0.666666666667,
+  "completed": {
+    "CLASSICAL_ASTAR": true,
+    "HYBRID_QUANTUM_WALK": true
+  },
+  "agents": {
+    "CLASSICAL_ASTAR": {
+      "ai_type": "classical",
+      "start": [
+        1,
+        3
+      ],
+      "goal": [
+        5,
+        3
+      ],
+      "final_position": [
+        5,
+        3
+      ],
+      "status": "reached_goal",
+      "recovery_state": "idle",
+      "metrics": {
+        "planning_time": 0.00013431699994725932,
+        "path_length": 3.0,
+        "moves": 8,
+        "collisions": 0,
+        "replans": 4
+      }
+    },
+    "HYBRID_QUANTUM_WALK": {
+      "ai_type": "hybrid_quantum_classical",
+      "start": [
+        5,
+        3
+      ],
+      "goal": [
+        1,
+        3
+      ],
+      "final_position": [
+        1,
+        3
+      ],
+      "status": "reached_goal",
+      "recovery_state": "idle",
+      "metrics": {
+        "planning_time": 3.6885807759999807,
+        "path_length": 6.0,
+        "moves": 10,
+        "collisions": 0,
+        "replans": 5
+      }
+    }
+  },
+  "manager_metrics": {
+    "agents": 2,
+    "successful_moves": 18,
+    "blocked_moves": 19,
+    "conflicts": 1,
+    "invalid_proposals": 0,
+    "destination_conflicts": 1,
+    "cycle_rejections": 18,
+    "dependency_blocked": 0,
+    "obstacle_safety_blocks": 0,
+    "robot_safety_blocks": 0
+  },
+  "initial_obstacles": {
+    "O00": [
+      3,
+      2
+    ]
+  },
+  "final_obstacles": {
+    "O00": [
+      3,
+      2
+    ]
+  },
+  "history": [
+    {
+      "cycle": 1,
+      "simulation_time": 0.033333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          1,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          3
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          2,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          2,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 2,
+      "simulation_time": 0.066666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          2,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          3,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 3,
+      "simulation_time": 0.1,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 1,
+      "blocked": 1,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 1,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 1,
+      "obstacles_updated": true,
+      "changed_cells": [
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cycle": 4,
+      "simulation_time": 0.133333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 5,
+      "simulation_time": 0.166666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 6,
+      "simulation_time": 0.2,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": true,
+      "changed_cells": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "cycle": 7,
+      "simulation_time": 0.233333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 8,
+      "simulation_time": 0.266666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [
+        {
+          "event": "started",
+          "agent_id": "HYBRID_QUANTUM_WALK",
+          "attempt": 1,
+          "start": [
+            4,
+            2
+          ],
+          "waypoint": [
+            5,
+            2
+          ],
+          "path": [
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "planner_name": "QuantumWalkNavigationPlanner",
+          "family": "quantum",
+          "candidates_examined": 1
+        },
+        {
+          "event": "completed",
+          "agent_id": "HYBRID_QUANTUM_WALK",
+          "position": [
+            5,
+            2
+          ],
+          "waypoint": [
+            5,
+            2
+          ]
+        }
+      ],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 9,
+      "simulation_time": 0.3,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 1,
+      "obstacles_updated": true,
+      "changed_cells": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cycle": 10,
+      "simulation_time": 0.333333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 11,
+      "simulation_time": 0.366666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 12,
+      "simulation_time": 0.4,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": true,
+      "changed_cells": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "cycle": 13,
+      "simulation_time": 0.433333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "rejected_cycles": [
+        "CLASSICAL_ASTAR",
+        "HYBRID_QUANTUM_WALK"
+      ],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 0,
+      "blocked": 2,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 2,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 14,
+      "simulation_time": 0.466666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          2
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          1
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          1
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [
+        {
+          "event": "started",
+          "agent_id": "CLASSICAL_ASTAR",
+          "attempt": 1,
+          "start": [
+            4,
+            2
+          ],
+          "waypoint": [
+            3,
+            2
+          ],
+          "path": [
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "planner_name": "AStarPlanner",
+          "family": "classical",
+          "candidates_examined": 1
+        },
+        {
+          "event": "started",
+          "agent_id": "HYBRID_QUANTUM_WALK",
+          "attempt": 1,
+          "start": [
+            5,
+            2
+          ],
+          "waypoint": [
+            5,
+            1
+          ],
+          "path": [
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "planner_name": "QuantumWalkNavigationPlanner",
+          "family": "quantum",
+          "candidates_examined": 1
+        },
+        {
+          "event": "completed",
+          "agent_id": "CLASSICAL_ASTAR",
+          "position": [
+            3,
+            2
+          ],
+          "waypoint": [
+            3,
+            2
+          ]
+        },
+        {
+          "event": "completed",
+          "agent_id": "HYBRID_QUANTUM_WALK",
+          "position": [
+            5,
+            1
+          ],
+          "waypoint": [
+            5,
+            1
+          ]
+        }
+      ],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 15,
+      "simulation_time": 0.5,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          3,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          5,
+          1
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          1
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          1
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 2,
+      "obstacles_updated": true,
+      "changed_cells": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "cycle": 16,
+      "simulation_time": 0.533333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          4,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          4,
+          1
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          1
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          1
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 17,
+      "simulation_time": 0.566666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          5,
+          2
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          3,
+          1
+        ]
+      },
+      "proposals": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          2,
+          1
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          2,
+          1
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 2,
+      "moved": 2,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 18,
+      "simulation_time": 0.6,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          2,
+          1
+        ]
+      },
+      "proposals": {
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          1
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          1
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 1,
+      "moved": 1,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": true,
+      "changed_cells": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "cycle": 19,
+      "simulation_time": 0.633333333333,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          1
+        ]
+      },
+      "proposals": {
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          2
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          2
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 1,
+      "moved": 1,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    },
+    {
+      "cycle": 20,
+      "simulation_time": 0.666666666667,
+      "positions_before": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          2
+        ]
+      },
+      "proposals": {
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          3
+        ]
+      },
+      "positions": {
+        "CLASSICAL_ASTAR": [
+          5,
+          3
+        ],
+        "HYBRID_QUANTUM_WALK": [
+          1,
+          3
+        ]
+      },
+      "rejected_cycles": [],
+      "recovery_events": [],
+      "proposed": 1,
+      "moved": 1,
+      "blocked": 0,
+      "safety_blocked": 0,
+      "invalid_proposals": 0,
+      "destination_conflicts": 0,
+      "cycle_rejections": 0,
+      "dependency_blocked": 0,
+      "obstacle_safety_blocks": 0,
+      "robot_safety_blocks": 0,
+      "replanned": 0,
+      "obstacles_updated": false,
+      "changed_cells": []
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "scenario": "4x4_short_route_optimized",
+  "shots": 32,
+  "solutions_classical": 2,
+  "grover_iterations": 8,
+  "transpiled_depth": 24765,
+  "transpiled_operations": 30978,
+  "counts": {
+    "00110011": 13,
+    "00001111": 19
+  },
+  "valid_shots": 32,
+  "observed_success_probability": 1.0,
+  "simulation_seconds": 24.99494316299979,
+  "simulator": "matrix_product_state",
+  "max_bond_dimension": 128,
+  "approximation_warning": true,
+  "decoded_routes": [
+    {
+      "bitstring": "00110011",
+      "sequence": [
+        3,
+        0,
+        3,
+        0
+      ],
+      "count": 13,
+      "valid": true,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "collision_step": null
+    },
+    {
+      "bitstring": "00001111",
+      "sequence": [
+        3,
+        3,
+        0,
+        0
+      ],
+      "count": 19,
+      "valid": true,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "collision_step": null
+    }
+  ]
+}

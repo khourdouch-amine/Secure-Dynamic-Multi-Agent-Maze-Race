@@ -1,0 +1,282 @@
+{
+  "experiment": "Statistical Classical vs Geometric Grover",
+  "configuration": {
+    "classical_repetitions": 30,
+    "grover_repetitions": 5,
+    "shots_per_grover_run": 1024,
+    "base_seed": 42,
+    "route_length": 4,
+    "search_space": 256,
+    "valid_routes": 3
+  },
+  "classical": {
+    "astar": {
+      "timing_s": {
+        "samples": 30,
+        "mean": 3.2493966743156e-05,
+        "median": 3.080649958064896e-05,
+        "stdev": 1.0245740639204349e-05,
+        "min": 2.3671000235481188e-05,
+        "max": 8.255800003098557e-05
+      },
+      "individual_times_s": [
+        4.401800015330082e-05,
+        3.733100038516568e-05,
+        3.066199951717863e-05,
+        3.1696000405645464e-05,
+        2.9662000088137574e-05,
+        2.956100070150569e-05,
+        2.9124000320734922e-05,
+        3.35000004270114e-05,
+        3.12490001306287e-05,
+        2.858300013031112e-05,
+        3.0051999601710122e-05,
+        3.002500034199329e-05,
+        2.9826999707438517e-05,
+        3.154200021526776e-05,
+        2.9982999876665417e-05,
+        2.3671000235481188e-05,
+        2.8077999559172895e-05,
+        2.458000017213635e-05,
+        2.5006000214489177e-05,
+        2.4452000616292935e-05,
+        3.140999979223125e-05,
+        3.276100051152753e-05,
+        8.255800003098557e-05,
+        3.385799936950207e-05,
+        3.313799970783293e-05,
+        3.508700046950253e-05,
+        3.145100072288187e-05,
+        3.095099964411929e-05,
+        3.174399989802623e-05,
+        2.9258999347803183e-05
+      ],
+      "valid_runs": 30,
+      "total_runs": 30
+    },
+    "dijkstra": {
+      "timing_s": {
+        "samples": 30,
+        "mean": 3.8729100045505525e-05,
+        "median": 3.571400020518922e-05,
+        "stdev": 1.4261302788696569e-05,
+        "min": 2.2789000468037557e-05,
+        "max": 9.618300009606173e-05
+      },
+      "individual_times_s": [
+        6.054499954188941e-05,
+        2.2789000468037557e-05,
+        2.909300019382499e-05,
+        4.074099979334278e-05,
+        3.2171999919228256e-05,
+        2.945200048998231e-05,
+        2.7643999601423275e-05,
+        2.939000023616245e-05,
+        3.0209000215108972e-05,
+        2.9149000511097256e-05,
+        2.8888999622722622e-05,
+        2.8903999918838963e-05,
+        2.9955000172776636e-05,
+        3.417900006752461e-05,
+        3.795300017372938e-05,
+        3.8096000025689136e-05,
+        3.537900010996964e-05,
+        3.6315999750513583e-05,
+        3.708700023707934e-05,
+        6.589799977518851e-05,
+        3.604900030040881e-05,
+        3.361300059623318e-05,
+        3.65270007023355e-05,
+        4.289400021662004e-05,
+        3.51999997292296e-05,
+        4.5371999476628844e-05,
+        4.5943999793962575e-05,
+        9.618300009606173e-05,
+        4.048299979331205e-05,
+        4.576799983624369e-05
+      ],
+      "valid_runs": 30,
+      "total_runs": 30
+    },
+    "exhaustive": {
+      "timing_s": {
+        "samples": 30,
+        "mean": 0.0007007270999565662,
+        "median": 0.0006433490002564213,
+        "stdev": 0.00017481638759374486,
+        "min": 0.000513313999363163,
+        "max": 0.0011672909995468217
+      },
+      "individual_times_s": [
+        0.0009973529995477293,
+        0.0007461200002580881,
+        0.0009408220003024326,
+        0.001027633999910904,
+        0.0011672909995468217,
+        0.0009237879994543619,
+        0.0006666250001217122,
+        0.000533082999936596,
+        0.0006463839999923948,
+        0.0006433529997593723,
+        0.0005908009998165653,
+        0.0006093880001571961,
+        0.0005755319998570485,
+        0.000553275999664038,
+        0.000513313999363163,
+        0.0005354230006560101,
+        0.000558495000404946,
+        0.0005382829995141947,
+        0.0005797209996671882,
+        0.0005281020003167214,
+        0.000543043999641668,
+        0.0005671230001098593,
+        0.0006433450007534702,
+        0.0006185250003909459,
+        0.0007056189997456386,
+        0.0008217879994845134,
+        0.000811956999314134,
+        0.0008038390005822293,
+        0.0008304789998874185,
+        0.0008013060005396255
+      ],
+      "valid_routes": 3,
+      "valid_indices": [
+        15,
+        51,
+        195
+      ]
+    }
+  },
+  "quantum": {
+    "algorithm": "Geometric Grover",
+    "iterations": 7,
+    "oracle_calls_per_circuit": 7,
+    "qubits": 18,
+    "initial_depth": 955,
+    "transpiled_depth": 24160,
+    "transpiled_operations": 26956,
+    "construction_time_s": 0.01917137000054936,
+    "transpilation_time_s": 2.2659232500000144,
+    "simulation_time_s": {
+      "samples": 5,
+      "mean": 6.670898463400045,
+      "median": 6.750606018000326,
+      "stdev": 0.46928459525564975,
+      "min": 6.093491501999779,
+      "max": 7.212199350000446
+    },
+    "success_probability_per_run": {
+      "samples": 5,
+      "mean": 0.9962890625,
+      "median": 0.99609375,
+      "stdev": 0.002431621015232174,
+      "min": 0.9931640625,
+      "max": 1.0
+    },
+    "aggregate_success_probability": 0.9962890625,
+    "aggregate_valid_shots": 5101,
+    "aggregate_total_shots": 5120,
+    "runs_recovering_all_solutions": 5,
+    "runs": [
+      {
+        "run": 1,
+        "seed": 42,
+        "shots": 1024,
+        "valid_shots": 1020,
+        "success_probability": 0.99609375,
+        "simulation_time_s": 6.297527789000014,
+        "all_solutions_recovered": true,
+        "counts": {
+          "11011011": 1,
+          "11111111": 1,
+          "00001111": 345,
+          "11011101": 1,
+          "11000011": 328,
+          "11100001": 1,
+          "00110011": 347
+        }
+      },
+      {
+        "run": 2,
+        "seed": 43,
+        "shots": 1024,
+        "valid_shots": 1024,
+        "success_probability": 1.0,
+        "simulation_time_s": 6.093491501999779,
+        "all_solutions_recovered": true,
+        "counts": {
+          "00001111": 336,
+          "00110011": 348,
+          "11000011": 340
+        }
+      },
+      {
+        "run": 3,
+        "seed": 44,
+        "shots": 1024,
+        "valid_shots": 1017,
+        "success_probability": 0.9931640625,
+        "simulation_time_s": 7.0006676579996565,
+        "all_solutions_recovered": true,
+        "counts": {
+          "01100111": 1,
+          "10011101": 1,
+          "01000111": 1,
+          "01110100": 1,
+          "00110100": 1,
+          "10101100": 1,
+          "00001111": 319,
+          "01110110": 1,
+          "00110011": 324,
+          "11000011": 374
+        }
+      },
+      {
+        "run": 4,
+        "seed": 45,
+        "shots": 1024,
+        "valid_shots": 1020,
+        "success_probability": 0.99609375,
+        "simulation_time_s": 7.212199350000446,
+        "all_solutions_recovered": true,
+        "counts": {
+          "10011000": 1,
+          "10101110": 1,
+          "10101010": 1,
+          "11110011": 1,
+          "00001111": 343,
+          "00110011": 345,
+          "11000011": 332
+        }
+      },
+      {
+        "run": 5,
+        "seed": 46,
+        "shots": 1024,
+        "valid_shots": 1020,
+        "success_probability": 0.99609375,
+        "simulation_time_s": 6.750606018000326,
+        "all_solutions_recovered": true,
+        "counts": {
+          "11001111": 1,
+          "10111110": 1,
+          "01110001": 1,
+          "00100101": 1,
+          "00001111": 321,
+          "11000011": 330,
+          "00110011": 369
+        }
+      }
+    ]
+  },
+  "methodological_notes": [
+    "Classical algorithms are measured repeatedly after one excluded warm-up.",
+    "Grover uses one constructed and transpiled circuit for all simulation runs.",
+    "Each Grover simulation uses a distinct simulator seed.",
+    "Grover construction uses classical solution counting to estimate iterations.",
+    "Construction and transpilation are reported separately from simulation.",
+    "A* and Dijkstra solve shortest-path search; Grover searches fixed-length encoded routes.",
+    "All quantum results are obtained with Aer simulation, not quantum hardware.",
+    "This experiment does not establish quantum advantage."
+  ]
+}

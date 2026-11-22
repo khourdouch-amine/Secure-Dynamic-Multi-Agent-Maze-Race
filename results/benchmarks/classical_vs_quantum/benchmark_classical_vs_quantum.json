@@ -1,0 +1,418 @@
+{
+  "experiment": "Classical vs Geometric Grover",
+  "seed": 42,
+  "shots": 1024,
+  "classical_maze": {
+    "width": 5,
+    "height": 5,
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      3,
+      3
+    ],
+    "obstacles": [
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "grover_model": {
+    "width": 3,
+    "height": 3,
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      2,
+      2
+    ],
+    "obstacles": [
+      [
+        1,
+        0
+      ]
+    ],
+    "coordinate_translation": [
+      1,
+      1
+    ],
+    "route_length": 4,
+    "search_space": 256,
+    "valid_routes": 3
+  },
+  "classical": {
+    "astar": {
+      "time_s": 5.0099999953090446e-05,
+      "path": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "validation": {
+        "valid": true,
+        "translated_path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "sequence": [
+          3,
+          0,
+          0,
+          3
+        ],
+        "steps": 4
+      }
+    },
+    "dijkstra": {
+      "time_s": 2.9828000151610468e-05,
+      "path": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "validation": {
+        "valid": true,
+        "translated_path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "sequence": [
+          3,
+          0,
+          0,
+          3
+        ],
+        "steps": 4
+      }
+    },
+    "exhaustive": {
+      "time_s": 0.0006308440001703275,
+      "evaluated_routes": 256,
+      "valid_routes": 3,
+      "valid_indices": [
+        15,
+        51,
+        195
+      ]
+    }
+  },
+  "quantum": {
+    "algorithm": "Geometric Grover",
+    "iterations": 7,
+    "oracle_calls": 7,
+    "qubits": 18,
+    "initial_depth": 955,
+    "transpiled_depth": 24160,
+    "transpiled_operations": 26957,
+    "construction_time_s": 0.020543476000057126,
+    "transpilation_time_s": 2.490193219000048,
+    "simulation_time_s": 6.348581923999973,
+    "valid_shots": 1020,
+    "success_probability": 0.99609375,
+    "all_solutions_recovered": true,
+    "counts": {
+      "11011011": 1,
+      "11111111": 1,
+      "00001111": 345,
+      "11011101": 1,
+      "11000011": 328,
+      "11100001": 1,
+      "00110011": 347
+    },
+    "decoded_routes": [
+      {
+        "bitstring": "11011011",
+        "index": 219,
+        "sequence": [
+          3,
+          2,
+          1,
+          3
+        ],
+        "valid": false,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        "collision_step": 2,
+        "count": 1
+      },
+      {
+        "bitstring": "11111111",
+        "index": 255,
+        "sequence": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "valid": false,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "collision_step": 3,
+        "count": 1
+      },
+      {
+        "bitstring": "00001111",
+        "index": 15,
+        "sequence": [
+          3,
+          3,
+          0,
+          0
+        ],
+        "valid": true,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "collision_step": null,
+        "count": 345
+      },
+      {
+        "bitstring": "11011101",
+        "index": 221,
+        "sequence": [
+          1,
+          3,
+          1,
+          3
+        ],
+        "valid": false,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "collision_step": 1,
+        "count": 1
+      },
+      {
+        "bitstring": "11000011",
+        "index": 195,
+        "sequence": [
+          3,
+          0,
+          0,
+          3
+        ],
+        "valid": true,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "collision_step": null,
+        "count": 328
+      },
+      {
+        "bitstring": "11100001",
+        "index": 225,
+        "sequence": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "valid": false,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        "collision_step": 1,
+        "count": 1
+      },
+      {
+        "bitstring": "00110011",
+        "index": 51,
+        "sequence": [
+          3,
+          0,
+          3,
+          0
+        ],
+        "valid": true,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "collision_step": null,
+        "count": 347
+      }
+    ]
+  },
+  "methodological_notes": [
+    "The classical maze and Grover model represent the same topology through a coordinate translation.",
+    "A* and Dijkstra return shortest paths; Grover searches fixed-length movement sequences.",
+    "The classical exhaustive oracle evaluates every encoded route.",
+    "Grover construction internally performs classical solution counting to determine its iteration count.",
+    "Construction time therefore includes classical preprocessing.",
+    "Quantum results are obtained from Qiskit Aer simulation, not quantum hardware.",
+    "No quantum advantage is claimed."
+  ]
+}

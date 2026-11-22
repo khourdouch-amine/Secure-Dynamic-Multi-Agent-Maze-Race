@@ -1,0 +1,131 @@
+{
+  "experiment": "Multi-scale statistical classical vs geometric Grover",
+  "scenario_count": 3,
+  "scenarios": {
+    "G1_3x3_L4": {
+      "grid": [
+        3,
+        3
+      ],
+      "route_length": 4,
+      "search_space": 256,
+      "valid_routes": 3,
+      "astar_mean_s": 1.781050001833743e-05,
+      "astar_ci_95_s": [
+        1.5627909709266414e-05,
+        1.999309032740845e-05
+      ],
+      "dijkstra_mean_s": 1.6601133393123745e-05,
+      "dijkstra_ci_95_s": [
+        1.5462875237791637e-05,
+        1.7739391548455853e-05
+      ],
+      "exhaustive_mean_s": 0.0017411228333609567,
+      "exhaustive_ci_95_s": [
+        -0.0006972209477203665,
+        0.00417946661444228
+      ],
+      "grover_iterations": 7,
+      "grover_qubits": 18,
+      "grover_initial_depth": 955,
+      "grover_construction_time_s": 0.01703337500021007,
+      "quantum_simulation_performed": true,
+      "grover_transpilation_time_s": 2.417213167999762,
+      "grover_transpiled_depth": 24160,
+      "grover_simulation_mean_s": 6.793632176999745,
+      "grover_simulation_ci_95_s": [
+        6.104927193569996,
+        7.482337160429495
+      ],
+      "grover_aggregate_success_probability": 0.997265625,
+      "grover_aggregate_success_wilson_95_ci": [
+        0.9954151789126284,
+        0.9983704487113725
+      ],
+      "grover_total_shots": 5120,
+      "grover_runs_recovering_all_solutions": 5,
+      "bond_dimension_cap": null,
+      "approximation_warning": false
+    },
+    "G2_4x4_L4": {
+      "grid": [
+        4,
+        4
+      ],
+      "route_length": 4,
+      "search_space": 256,
+      "valid_routes": 2,
+      "astar_mean_s": 1.859480004592721e-05,
+      "astar_ci_95_s": [
+        1.684362265701986e-05,
+        2.034597743483456e-05
+      ],
+      "dijkstra_mean_s": 1.9024266657652332e-05,
+      "dijkstra_ci_95_s": [
+        1.693207723247481e-05,
+        2.1116456082829854e-05
+      ],
+      "exhaustive_mean_s": 0.00048714019997836053,
+      "exhaustive_ci_95_s": [
+        0.0004665867231853706,
+        0.0005076936767713505
+      ],
+      "grover_iterations": 8,
+      "grover_qubits": 20,
+      "grover_initial_depth": 995,
+      "grover_construction_time_s": 0.01686945899928105,
+      "quantum_simulation_performed": true,
+      "grover_transpilation_time_s": 4.357644230000005,
+      "grover_transpiled_depth": 24768,
+      "grover_simulation_mean_s": 26.78682167939987,
+      "grover_simulation_ci_95_s": [
+        24.732671512451564,
+        28.84097184634818
+      ],
+      "grover_aggregate_success_probability": 1.0,
+      "grover_aggregate_success_wilson_95_ci": [
+        0.9765538048284949,
+        1.0
+      ],
+      "grover_total_shots": 160,
+      "grover_runs_recovering_all_solutions": 5,
+      "bond_dimension_cap": 128,
+      "approximation_warning": true
+    },
+    "G3_4x4_L6": {
+      "grid": [
+        4,
+        4
+      ],
+      "route_length": 6,
+      "search_space": 4096,
+      "valid_routes": 7,
+      "astar_mean_s": 3.143816663092972e-05,
+      "astar_ci_95_s": [
+        2.877557464739625e-05,
+        3.4100758614463195e-05
+      ],
+      "dijkstra_mean_s": 2.8240499947666346e-05,
+      "dijkstra_ci_95_s": [
+        2.5158481120153847e-05,
+        3.1322518775178844e-05
+      ],
+      "exhaustive_mean_s": 0.008514930466662917,
+      "exhaustive_ci_95_s": [
+        0.007866879360585177,
+        0.009162981572740658
+      ],
+      "grover_iterations": 18,
+      "grover_qubits": 26,
+      "grover_initial_depth": 3243,
+      "grover_construction_time_s": 0.05101636099971074,
+      "quantum_simulation_performed": false
+    }
+  },
+  "methodological_notes": [
+    "A* and Dijkstra are shortest-path baselines, not identical-objective comparators to Grover.",
+    "Classical exhaustive enumeration is the direct fixed-length route-search comparator.",
+    "G1 and G2 include repeated Aer MPS simulations; G3 is not simulated.",
+    "No quantum advantage is claimed."
+  ]
+}

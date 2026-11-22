@@ -1,0 +1,4 @@
+scenario,simulated,shots,success_probability,wilson_low,wilson_high,simulation_mean_s,simulation_median_s,construction_s,transpilation_s,qubits,initial_depth,transpiled_depth,transpiled_operations,iterations,approximation_warning,bond_dimension_cap
+G1_3x3_L4,True,5120,0.997265625,0.9954151789126284,0.9983704487113725,6.793632176999745,6.739300727999762,0.01703337500021007,2.417213167999762,18,955,24160,26958,7,False,
+G2_4x4_L4,True,160,1.0,0.9765538048284949,1.0,26.78682167939987,26.374920889999885,0.01686945899928105,4.357644230000005,20,995,24768,30982,8,True,128
+G3_4x4_L6,False,0,,,,,,0.05101636099971074,,26,3243,,,18,False,

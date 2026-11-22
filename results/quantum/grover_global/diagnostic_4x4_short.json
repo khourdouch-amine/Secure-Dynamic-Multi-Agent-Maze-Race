@@ -1,0 +1,25 @@
+{
+  "experiment": "Geometric Global Grover 4x4 short route",
+  "grid": [4, 4],
+  "start": [0, 0],
+  "goal": [2, 2],
+  "obstacles": [[1, 0], [2, 1]],
+  "route_length": 4,
+  "search_space": 256,
+  "classical_valid_routes": 2,
+  "grover_iterations": 8,
+  "qubits": 20,
+  "uncompiled_depth": 4035,
+  "transpiled_depth": 239885,
+  "shots": 32,
+  "counts": {
+    "00001111": 19,
+    "00110011": 13
+  },
+  "valid_shots": 32,
+  "observed_success_probability": 1.0,
+  "simulation_time_s": 200.68,
+  "simulator": "Aer Matrix Product State",
+  "max_bond_dimension": 128,
+  "scientific_note": "Limited diagnostic run. MPS bond dimension cap may introduce approximation. Not a full statistical benchmark and no quantum advantage claimed."
+}

@@ -1,0 +1,1329 @@
+{
+  "experiment": "Multi-scale statistical classical vs geometric Grover",
+  "scenario": {
+    "name": "G1_3x3_L4",
+    "grid": [
+      3,
+      3
+    ],
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      2,
+      2
+    ],
+    "obstacles": [
+      [
+        1,
+        0
+      ]
+    ],
+    "route_length": 4,
+    "search_space": 256,
+    "valid_routes": 3,
+    "valid_indices": [
+      15,
+      51,
+      195
+    ],
+    "description": "Reference scenario: compact grid, four-step routes."
+  },
+  "configuration": {
+    "classical_repetitions": 30,
+    "grover_repetitions": 5,
+    "confidence_level": 0.95,
+    "base_seed": 4200
+  },
+  "classical": {
+    "astar": {
+      "algorithm": "A*",
+      "objective": "shortest path",
+      "timing_s": {
+        "samples": 30,
+        "mean": 1.781050001833743e-05,
+        "median": 1.7297999875154346e-05,
+        "stdev_sample": 5.845084197116298e-06,
+        "standard_error": 1.0671614884258564e-06,
+        "min": 1.0849000318557955e-05,
+        "max": 2.9967000045871828e-05,
+        "confidence_level": 0.95,
+        "mean_confidence_interval": [
+          1.5627909709266414e-05,
+          1.999309032740845e-05
+        ],
+        "confidence_interval_method": "two-sided Student t"
+      },
+      "individual_times_s": [
+        1.7178999769384973e-05,
+        2.9967000045871828e-05,
+        2.943600065918872e-05,
+        2.39650007642922e-05,
+        2.4885999664547853e-05,
+        2.7033999685954768e-05,
+        1.8538999938755296e-05,
+        1.741699998092372e-05,
+        1.8779000129143242e-05,
+        1.2220999451528769e-05,
+        1.2057999811077025e-05,
+        1.741800042509567e-05,
+        1.8293000721314456e-05,
+        1.6900999980862252e-05,
+        1.8075999832944945e-05,
+        1.2466000043787062e-05,
+        1.1457000255177263e-05,
+        1.135200000135228e-05,
+        1.1465000170574058e-05,
+        1.7139999727078248e-05,
+        1.843900008680066e-05,
+        1.2146999324613716e-05,
+        1.1242000255151652e-05,
+        1.7063000086636748e-05,
+        1.6676999621267896e-05,
+        2.3206999685498886e-05,
+        1.168000017059967e-05,
+        1.0849000318557955e-05,
+        2.890799987653736e-05,
+        1.805400006560376e-05
+      ],
+      "valid_runs": 30,
+      "total_runs": 30,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path_length_moves": 4,
+      "all_paths_valid": true
+    },
+    "dijkstra": {
+      "algorithm": "Dijkstra",
+      "objective": "shortest path",
+      "timing_s": {
+        "samples": 30,
+        "mean": 1.6601133393123745e-05,
+        "median": 1.5905000054772245e-05,
+        "stdev_sample": 3.048311324539093e-06,
+        "standard_error": 5.565429582495041e-07,
+        "min": 1.1066999832110014e-05,
+        "max": 2.4681000468262937e-05,
+        "confidence_level": 0.95,
+        "mean_confidence_interval": [
+          1.5462875237791637e-05,
+          1.7739391548455853e-05
+        ],
+        "confidence_interval_method": "two-sided Student t"
+      },
+      "individual_times_s": [
+        1.2210000022605527e-05,
+        1.1254999662924092e-05,
+        1.609700029803207e-05,
+        1.5394000001833774e-05,
+        1.8433999684930313e-05,
+        1.5765999705763534e-05,
+        1.4925999494153075e-05,
+        1.7846000446297694e-05,
+        1.5981000615283847e-05,
+        1.575299938849639e-05,
+        1.5288000213331543e-05,
+        1.5730999621155206e-05,
+        1.7919999663718045e-05,
+        1.807000080589205e-05,
+        1.6601999959675595e-05,
+        1.5828999494260643e-05,
+        1.535499995952705e-05,
+        1.532400074211182e-05,
+        1.1066999832110014e-05,
+        2.0291000510042068e-05,
+        2.2171000637172256e-05,
+        1.7026000023179222e-05,
+        1.541399979032576e-05,
+        1.5364000319095794e-05,
+        1.6382000467274338e-05,
+        2.3352000425802544e-05,
+        1.853199955803575e-05,
+        2.4681000468262937e-05,
+        1.5984000128810294e-05,
+        1.398899985360913e-05
+      ],
+      "valid_runs": 30,
+      "total_runs": 30,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "path_length_moves": 4,
+      "all_paths_valid": true
+    },
+    "exhaustive": {
+      "algorithm": "Classical exhaustive route enumeration",
+      "objective": "enumerate all valid fixed-length routes",
+      "timing_s": {
+        "samples": 30,
+        "mean": 0.0017411228333609567,
+        "median": 0.000503571499393729,
+        "stdev_sample": 0.006530004574244403,
+        "standard_error": 0.0011922102686418592,
+        "min": 0.0004298699996070354,
+        "max": 0.03630515300028492,
+        "confidence_level": 0.95,
+        "mean_confidence_interval": [
+          -0.0006972209477203665,
+          0.00417946661444228
+        ],
+        "confidence_interval_method": "two-sided Student t"
+      },
+      "individual_times_s": [
+        0.03630515300028492,
+        0.0004963579995092005,
+        0.0004784699995070696,
+        0.0005513400001291302,
+        0.00046603500049968716,
+        0.00044525300017994596,
+        0.0004887129998678574,
+        0.0004298699996070354,
+        0.0005650600005537854,
+        0.0004401870000947383,
+        0.0005209959999774583,
+        0.0004889150004601106,
+        0.0005741120003222022,
+        0.0005168489997231518,
+        0.0005107849992782576,
+        0.0006712090007567895,
+        0.00045246199988469016,
+        0.0004536420001386432,
+        0.000433926000368956,
+        0.0005443760001071496,
+        0.00043168599950149655,
+        0.0012378050005281693,
+        0.0006582989999515121,
+        0.000665298000058101,
+        0.0006529020001835306,
+        0.0007770319998599007,
+        0.0006190009999045287,
+        0.0004821860002266476,
+        0.0004437459992914228,
+        0.0004320190000726143
+      ],
+      "valid_routes": 3,
+      "valid_indices": [
+        15,
+        51,
+        195
+      ],
+      "search_space": 256,
+      "valid_runs": 30,
+      "total_runs": 30,
+      "all_results_consistent": true
+    }
+  },
+  "grover_structure": {
+    "iterations": 7,
+    "oracle_calls_per_circuit": 7,
+    "qubits": 18,
+    "initial_depth": 955,
+    "initial_operations": 1180,
+    "construction_time_s": 0.01703337500021007,
+    "classically_counted_solutions": 3
+  },
+  "quantum_simulation_policy": {
+    "performed": true,
+    "reason": "Scenario included in the controlled MPS simulation campaign."
+  },
+  "quantum": {
+    "algorithm": "Geometric Grover",
+    "simulator": "Qiskit Aer matrix_product_state",
+    "simulation_repetitions": 5,
+    "shots_per_run": 1024,
+    "total_shots": 5120,
+    "base_seed": 4200,
+    "seeds": [
+      4200,
+      4201,
+      4202,
+      4203,
+      4204
+    ],
+    "transpiler_seed": 42,
+    "transpilation_time_s": 2.417213167999762,
+    "transpiled_depth": 24160,
+    "transpiled_operations": 26958,
+    "simulation_time_s": {
+      "samples": 5,
+      "mean": 6.793632176999745,
+      "median": 6.739300727999762,
+      "stdev_sample": 0.5546629236460546,
+      "standard_error": 0.24805280037427072,
+      "min": 6.236751573999754,
+      "max": 7.557205023999813,
+      "confidence_level": 0.95,
+      "mean_confidence_interval": [
+        6.104927193569996,
+        7.482337160429495
+      ],
+      "confidence_interval_method": "two-sided Student t"
+    },
+    "success_probability_per_run": {
+      "samples": 5,
+      "mean": 0.997265625,
+      "median": 0.9970703125,
+      "stdev_sample": 0.0016046559301909165,
+      "standard_error": 0.0007176239480810092,
+      "min": 0.99609375,
+      "max": 1.0,
+      "confidence_level": 0.95,
+      "mean_confidence_interval": [
+        0.9952731815019779,
+        0.9992580684980222
+      ],
+      "confidence_interval_method": "two-sided Student t"
+    },
+    "aggregate_valid_shots": 5106,
+    "aggregate_invalid_shots": 14,
+    "aggregate_success_probability": 0.997265625,
+    "aggregate_success_probability_wilson_95_ci": [
+      0.9954151789126284,
+      0.9983704487113725
+    ],
+    "runs_recovering_all_solutions": 5,
+    "all_solutions_recovered_in_every_run": true,
+    "bond_dimension_cap": null,
+    "approximation_warning": false,
+    "simulator_options": {
+      "max_memory_mb": 7000,
+      "mps_omp_threads": 1,
+      "matrix_product_state_truncation_threshold": 1e-16
+    },
+    "runs": [
+      {
+        "run": 1,
+        "seed": 4200,
+        "shots": 1024,
+        "valid_shots": 1021,
+        "invalid_shots": 3,
+        "success_probability": 0.9970703125,
+        "success_probability_wilson_95_ci": [
+          0.9914219673132697,
+          0.9990031524985098
+        ],
+        "simulation_time_s": 6.31565237399991,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51,
+          195
+        ],
+        "decoded_counts": [
+          {
+            "bitstring": "11110100",
+            "index": 244,
+            "route": [
+              0,
+              1,
+              3,
+              3
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "10100011",
+            "index": 163,
+            "route": [
+              3,
+              0,
+              2,
+              2
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            "collision_step": 4
+          },
+          {
+            "bitstring": "11000000",
+            "index": 192,
+            "route": [
+              0,
+              0,
+              0,
+              3
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "count": 331,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11000011",
+            "index": 195,
+            "route": [
+              3,
+              0,
+              0,
+              3
+            ],
+            "count": 341,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "count": 349,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ]
+      },
+      {
+        "run": 2,
+        "seed": 4201,
+        "shots": 1024,
+        "valid_shots": 1024,
+        "invalid_shots": 0,
+        "success_probability": 1.0,
+        "success_probability_wilson_95_ci": [
+          0.9962625959599825,
+          1.0
+        ],
+        "simulation_time_s": 6.236751573999754,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51,
+          195
+        ],
+        "decoded_counts": [
+          {
+            "bitstring": "11000011",
+            "index": 195,
+            "route": [
+              3,
+              0,
+              0,
+              3
+            ],
+            "count": 334,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "count": 349,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "count": 341,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ]
+      },
+      {
+        "run": 3,
+        "seed": 4202,
+        "shots": 1024,
+        "valid_shots": 1020,
+        "invalid_shots": 4,
+        "success_probability": 0.99609375,
+        "success_probability_wilson_95_ci": [
+          0.9899993755946205,
+          0.9984799188344246
+        ],
+        "simulation_time_s": 6.739300727999762,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51,
+          195
+        ],
+        "decoded_counts": [
+          {
+            "bitstring": "10011000",
+            "index": 152,
+            "route": [
+              0,
+              2,
+              1,
+              2
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "01011000",
+            "index": 88,
+            "route": [
+              0,
+              2,
+              1,
+              1
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "00001101",
+            "index": 13,
+            "route": [
+              1,
+              3,
+              0,
+              0
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                -1
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "11101111",
+            "index": 239,
+            "route": [
+              3,
+              3,
+              2,
+              3
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                -1,
+                2
+              ]
+            ],
+            "collision_step": 3
+          },
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "count": 339,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11000011",
+            "index": 195,
+            "route": [
+              3,
+              0,
+              0,
+              3
+            ],
+            "count": 329,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "count": 352,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ]
+      },
+      {
+        "run": 4,
+        "seed": 4203,
+        "shots": 1024,
+        "valid_shots": 1021,
+        "invalid_shots": 3,
+        "success_probability": 0.9970703125,
+        "success_probability_wilson_95_ci": [
+          0.9914219673132697,
+          0.9990031524985098
+        ],
+        "simulation_time_s": 7.557205023999813,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51,
+          195
+        ],
+        "decoded_counts": [
+          {
+            "bitstring": "01000000",
+            "index": 64,
+            "route": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "11000011",
+            "index": 195,
+            "route": [
+              3,
+              0,
+              0,
+              3
+            ],
+            "count": 355,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11101011",
+            "index": 235,
+            "route": [
+              3,
+              2,
+              2,
+              3
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            "collision_step": 2
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "count": 322,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11111101",
+            "index": 253,
+            "route": [
+              1,
+              3,
+              3,
+              3
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                -1
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "count": 344,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ]
+      },
+      {
+        "run": 5,
+        "seed": 4204,
+        "shots": 1024,
+        "valid_shots": 1020,
+        "invalid_shots": 4,
+        "success_probability": 0.99609375,
+        "success_probability_wilson_95_ci": [
+          0.9899993755946205,
+          0.9984799188344246
+        ],
+        "simulation_time_s": 7.119251184999484,
+        "all_solutions_recovered": true,
+        "detected_solutions": [
+          15,
+          51,
+          195
+        ],
+        "decoded_counts": [
+          {
+            "bitstring": "01010101",
+            "index": 85,
+            "route": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                -1
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "10000110",
+            "index": 134,
+            "route": [
+              2,
+              1,
+              0,
+              2
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "00111011",
+            "index": 59,
+            "route": [
+              3,
+              2,
+              3,
+              0
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            "collision_step": 2
+          },
+          {
+            "bitstring": "11101010",
+            "index": 234,
+            "route": [
+              2,
+              2,
+              2,
+              3
+            ],
+            "count": 1,
+            "valid": false,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "collision_step": 1
+          },
+          {
+            "bitstring": "00001111",
+            "index": 15,
+            "route": [
+              3,
+              3,
+              0,
+              0
+            ],
+            "count": 379,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "11000011",
+            "index": 195,
+            "route": [
+              3,
+              0,
+              0,
+              3
+            ],
+            "count": 320,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          },
+          {
+            "bitstring": "00110011",
+            "index": 51,
+            "route": [
+              3,
+              0,
+              3,
+              0
+            ],
+            "count": 321,
+            "valid": true,
+            "path": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "collision_step": null
+          }
+        ]
+      }
+    ]
+  },
+  "methodological_notes": [
+    "A* and Dijkstra solve the shortest-path objective.",
+    "Classical exhaustive enumeration and Grover use the same fixed-length route search space.",
+    "Classical timing measurements exclude one warm-up per algorithm.",
+    "Classical timing confidence intervals use the two-sided Student t distribution.",
+    "Quantum success-proportion confidence intervals use the Wilson score method.",
+    "Grover circuit construction internally performs classical solution counting to determine the iteration count.",
+    "Circuit construction, transpilation and repeated simulation times are reported separately.",
+    "Grover simulations use Qiskit Aer CPU matrix-product-state simulation, not quantum hardware.",
+    "G2 uses a maximum MPS bond dimension of 128 and only 32 shots per run; results are diagnostic and approximate.",
+    "G3 is limited to classical timing and Grover circuit structural/construction analysis; no transpilation or quantum simulation is performed.",
+    "The experiment does not establish quantum advantage."
+  ]
+}
